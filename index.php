@@ -68,9 +68,15 @@
     var_dump($convert_array);
 
     //all math methodes
-    echo(pi()); //The pi() function returns the value of PI
+    echo(pi() . "<br>"); //The pi() function returns the value of PI
+    echo (rand() ."<br>"); //for  get a random rumber
+    echo(rand(40, 80)); // for get a random number from a declairing renge.
     echo(min(0, 150, 30, 20, -8, -200) . "<br>");  //PHP min()  Functions for min number
-    echo(max(0, 150, 30, 20, -8, -200)); //PHP max() Functions for max number
+    echo(max(0, 150, 30, 20, -8, -200) . "<br>"); //PHP max() Functions for max number
+    echo(abs(-6.7) . "<br>"); //returns the  positive value of a number.
+    echo(sqrt(64) . "<br>");  //returns the root of a number.
+    echo(round(0.60)); // converting a floating-point number to its nearest integer.
+
 
     $u=50.46;
 

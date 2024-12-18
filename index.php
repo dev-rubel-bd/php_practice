@@ -258,6 +258,45 @@ echo "<br>";
 
 $number=[21,12,5,7,"rupom","17"];
 echo array_sum($number);
+echo "<br>";
+$numbers=[21,12,5,7];
+echo array_product($numbers);
+
+echo "<br>";
+
+$add_num=[3,4,7,8];
+$result=array_reduce($add_num,function($num1,$num2){
+    return $num1+$num2;
+},1);
+echo $result;
+
+echo "<br>";
+$myNumber=[2,4,6,1,7];
+$map_number=array_map(function($x){
+    return $x+$x;
+
+},$myNumber);
+print_r($map_number);
+
+$strings = ["hello", "world"];
+$uppercased = array_map('strtoupper', $strings);
+
+print_r($uppercased);
+
+$key=["rubel","rupom","rakib"];
+$value=[20,30,40,];
+$result= array_combine($key,$value);
+print_r($result);
+
+
+$input=["rupon"=>20,"rubel"=>30,"anondo"=>40];
+$result=array_flip($input);
+print_r($result);
+
+$arr11=[2,4,6,3];
+$arr22=[1,5,4,3];
+$results=array_unique($arr11,$arr22);
+print_r($results);
 
     ?>  
 </body>

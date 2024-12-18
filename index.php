@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,7 @@
 
     //for geting variables types:(.gettype , var_dump)
 
-    echo "Data type of x: " . gettype($x) . '<br/>';
+    echo "Data type of x: " . gettype($x) . "<br/>";
     $y = 10.55;
     echo "Data type of y: " . gettype($x) . "<br>";
     $z = "54";
@@ -75,13 +74,177 @@
     echo(max(0, 150, 30, 20, -8, -200) . "<br>"); //PHP max() Functions for max number
     echo(abs(-6.7) . "<br>"); //returns the  positive value of a number.
     echo(sqrt(64) . "<br>");  //returns the root of a number.
-    echo(round(0.60)); // converting a floating-point number to its nearest integer.
+    echo(round(0.60). "<br>"); // converting a floating-point number to its nearest integer.
+
+    // ***********************************************************8******************************************************************* */
 
 
-    $u=50.46;
+
+    $time=date("H");
+if($time<"9"){
+echo "Now breakfast Time" ;
+}
+elseif($time>"13"){
+echo "Now Lunch time" ;
+}
+else{
+echo "Now Dinner Time" ;
+}
+
+$x=20;
+$y=$x<50 ? "$x is less than 50": "$x is greater than 50";
+echo $y;
+
+echo "<br>";
+$cars=array("volvo","Mahindra","Toyota");
+var_dump($cars);
+echo "<br>";
+echo $cars[0];
+
+echo "<br>"; 
+
+$fruits=array("Mango","apple","Orange");
+$fruits[1]="guava";
+var_dump($fruits);
+echo "<br>";
 
 
-  
+$flower=array("rose", "lily","amni");
+foreach ($flower as $x){
+    echo "$x <br>";
+}
+
+echo "<br>";
+$fruits=array("Mango","apple","Orange");
+echo count($fruits);
+
+echo "<br>";
+$name=["rupom","Roni"];
+$name[]="Rumon";
+var_dump($name);
+
+echo "<br>";
+
+$name=["Rupom","roni"];
+array_push($name, "Rumon");
+var_dump($name);
+
+echo "<br>";
+$arr=[40,60,30,20];
+array_pop($arr);
+var_dump($arr);
+
+echo "<br>";
+
+foreach($arr as $r){
+    echo $r;
+}
+
+echo "<br>";
+$arr=[40,70,90,30];
+array_splice($arr,1,2);
+var_dump($arr);
+
+$arr=[40,70,90,30];
+array_splice($arr,1,2,50);
+var_dump($arr);
+
+echo "<br>";
+
+$fruit_pot=["apple","banana","orange"];
+if(in_array("apple",$fruit_pot)){
+    echo "Got Apple"."<br>";
+}
+else{
+    echo "There have no Apple"."<br>";
+}
+if(in_array("banana",$fruit_pot)){
+    echo "Got Banana"."<br>";
+}
+else{
+    echo "There have no Banana"."<br>";
+}
+if(in_array("Guava",$fruit_pot)){
+    echo "Got Guava"."<br>";
+}
+else{
+    echo "There have no Guava"."<br>";
+}
+
+$rrr=[1,"2",3];
+$key=in_array(3,$rrr);
+if ($key!==false){
+    echo "value found: $key";
+}
+else{
+    echo "value not found";
+}
+
+echo "<br>";
+
+$yyy=[29,30,"cow",71];
+$xxx= array_keys($yyy);
+print_r($xxx);
+
+
+$lll = ["a" => 1, "b" => 2];
+$values=array_values($lll);
+print_r($values);
+
+echo "<br>";
+
+$nm = [3, 1, 2,6,5];
+asort($nm);
+print_r($nm);
+
+echo "<br>";
+
+$ab=["a"=>"apple","c"=>7,"e"=>5,"b"=>1];
+ksort($ab);
+print_r($ab);
+
+echo "<br>";
+
+$name="toofan";
+$birth=2024;
+$new_array=compact("name","birth");
+print_r($new_array);
+
+$car = array("brand"=>"Ford", "model"=>"Mustang", "year"=>1964);
+extract($car);
+echo $brand;
+
+echo "<br>";
+
+$pm=array_fill(1,3,"rubel");
+print_r($pm);
+
+
+$key=["a","b","c"];
+$arry=array_fill_keys($key,"rubel");
+echo "<pre>";
+print_r($arry);
+echo "<pre>";
+
+echo "<br>";
+
+// $data=[3,4,6,7,9,3];
+// function myFun($v){
+//     return($v==3);
+// }
+// $filter_data=array_filter($data,"myFun");
+// print_r($filter_data);
+
+echo "<br>";
+
+$data=[23,45,65,20,40,21,26];
+function myFun($var){
+return($var==65);
+}
+$filter_data=array_filter($data,function ($var){
+    return($var==65);
+    });
+print_r($filter_data);
 
 
     ?>  

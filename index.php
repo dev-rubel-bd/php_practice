@@ -246,6 +246,18 @@ $filter_data=array_filter($data,function ($var){
     });
 print_r($filter_data);
 
+$data=[23,45,65,20,40,21,26];
+$filter_data=array_filter($data,function($var){
+return $var % 2==0;
+});
+
+echo "Even Number:";
+print_r($filter_data);
+
+echo "<br>";
+
+$number=[21,12,5,7,"rupom","17"];
+echo array_sum($number);
 
     ?>  
 </body>

@@ -295,7 +295,7 @@ print_r($result);
 
 $arr11=[2,4,6,3];
 $arr22=[1,5,4,3];
-$results=array_unique($arr11,$arr22);
+$results=array_unique($arr11,$arr22); //problem
 print_r($results);
 
     ?>  

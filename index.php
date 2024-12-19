@@ -293,10 +293,39 @@ $input=["rupon"=>20,"rubel"=>30,"anondo"=>40];
 $result=array_flip($input);
 print_r($result);
 
-$arr11=[2,4,6,3];
-$arr22=[1,5,4,3];
-$results=array_unique($arr11,$arr22); //problem
+$arr22=[1,5,4,3,5];
+$results=array_unique($arr22); //problem
 print_r($results);
+
+
+$fruit_pot1=["apple","banana","orange"];
+$fruit_pot2=["paineapple","banana","charry"];
+$result=array_diff($fruit_pot1,$fruit_pot2);
+print_r($result);
+
+
+
+$fruit_pot3=[1=>"apple","2"=>"banana","3"=>"orange"];
+$fruit_pot4=[1=>"paineapple","2"=>"banana","4"=>"charry"];
+$result3=array_diff_key($fruit_pot3,$fruit_pot4);
+print_r($result3);
+
+$fruit_pot1=["apple","banana","orange"];
+$fruit_pot2=["paineapple","banana","charry"];
+$result=array_intersect($fruit_pot1,$fruit_pot2);
+print_r($result);
+
+shuffle($fruit_pot1);
+print_r($fruit_pot1);
+
+
+$fruits = ["apple", "banana", "cherry", "date"];
+$randomKey = array_rand($fruits,2);
+foreach($randomKey as $x){
+    echo  $fruits[$x]."<br>";
+};
+
+
 
     ?>  
 </body>
